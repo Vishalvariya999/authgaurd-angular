@@ -1,0 +1,68 @@
+
+
+.services h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Poppins", sans-serif;
+    margin-top: 50px;
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 35px 242px;
+}
+
+.boxes .divcontent {
+    width: 100%;
+    padding: 93px;
+    margin: 40px 20px;
+    border-radius: 10px;
+}
+
+.boxes .divcontent {
+    box-shadow: 5px 5px 75px rgb(0 0 0 / 10%);
+}
+
+.boxes .divcontent1 {
+    font-size: 6rem;
+    box-shadow: none;
+}
+
+.boxes .divcontent .flex {
+    display: flex;
+    align-items: center;
+}
+
+.boxes .divcontent p {
+    font-size: 19px;
+    font-family: poppins, sans-serif;
+    padding: 15px 25px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.boxes .divcontent a {
+    color: #D96122;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 17px;
+    cursor: pointer;
+    font-family: poppins, sans-serif;
+    padding: 30px 25px;
+}
+.button{
+    color: #D96122;
+    padding: 8px;
+    font-size: 13px;
+    background-color: antiquewhite;
+    border: none;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 25px;
+}

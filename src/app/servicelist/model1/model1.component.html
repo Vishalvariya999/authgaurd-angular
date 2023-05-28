@@ -1,0 +1,15 @@
+<div class="services"> 
+    <h1>{{ourServices}}</h1>
+    <span class="headerline"></span>
+    <div class="boxes">
+        <div class="divcontent divcontent2" *ngFor="let service1 of servicelist">
+            <div class="flex">
+                <img [src]="service1.image">
+                <h2>{{service1.title}}</h2>
+            </div>
+            <p>{{service1.description}}</p>
+            <!-- <a href="#">{{service1.button}}</a> -->
+            <button class="button" (click)="click(service1.id)">{{service1.button}}</button>
+        </div>
+    </div>
+</div>

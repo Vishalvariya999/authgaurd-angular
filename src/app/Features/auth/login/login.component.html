@@ -1,0 +1,73 @@
+<div class="row justify-content-center d-flex">
+  <div class="col-sm-4">
+    <div class="row justify-content-center rounded bg-light border p-5">
+      <h1 class="text-center login-title">SignIn</h1>
+      <div class="account-wall">
+        <form class="form-signin" [formGroup]="login">
+          <div class="form-group my-2">
+            <label>Email Address</label>
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+              name="email"
+              formControlName="email"
+              placeholder="Enter Email"
+              required
+            />
+            <span
+              class="text-danger"
+              *ngIf="
+                (formControls['email'].touched &&
+                  formControls['email'].pristine) ||
+                (isSubmitted &&
+                  formControls['email'].pristine &&
+                  formControls['email'].invalid)
+              "
+            >
+              Please Enter Email Address
+            </span>
+            <span
+              *ngIf="formControls['email'].invalid && formControls['email'].dirty && formControls['email'].errors?.['pattern']"
+              class="text-danger"
+              >Email Address is invalid!!</span
+            >
+          </div>
+          <div class="form-group my-2">
+            <label>Password</label>
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Password"
+              formControlName="password"
+              required
+            />
+            <span
+              class="text-danger"
+              *ngIf="
+                (formControls['password'].touched &&
+                  formControls['password'].pristine) ||
+                (isSubmitted &&
+                  formControls['password'].pristine &&
+                  formControls['password'].invalid)
+              "
+            >
+              Please Enter Password
+            </span>
+          </div>
+          <div class="row">
+            <button
+              class="btn btn-primary my-2"
+              type="submit"
+              (click)="onSignin()"
+            >
+              Sign in
+            </button>
+          </div>
+          <br />
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

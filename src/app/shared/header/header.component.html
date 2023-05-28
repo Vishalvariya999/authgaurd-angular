@@ -1,0 +1,35 @@
+<!-- <p>header works!</p> -->
+
+<div class="header">
+  <nav>
+    <ul>
+      <img [src]="logo" [routerLink]="'home'" />
+      <!-- <li *ngFor="let headData of headDataList"><a href="#">{{ headData }}</a>
+                <select></select>
+            </li> -->
+      <li><a [routerLink]="'home'" routerLinkActive="text-danger">Home</a></li>
+      <li>
+        <a [routerLink]="'service'" routerLinkActive="text-danger"
+          >Our Service</a
+        >
+      </li>
+      <li>
+        <a [routerLink]="'aboutus'" routerLinkActive="text-danger">About Us</a>
+      </li>
+      <li><a [routerLink]="'user'" routerLinkActive="text-danger">User</a></li>
+      <li>
+        <a [routerLink]="'contact'" routerLinkActive="text-danger">Contact</a>
+      </li>
+      <div class="btngetType">
+        <button
+          type="button"
+          style="display: flex; justify-content: end"
+          class="btnGet"
+          (click)="isLoggedOut()"
+        >
+          Log Out
+        </button>
+      </div>
+    </ul>
+  </nav>
+</div>

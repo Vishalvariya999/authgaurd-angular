@@ -1,0 +1,119 @@
+.topbar {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(196, 196, 196, 0) .01%, rgba(217, 97, 34, .2) 100%), url(../../../assets/image/topimg.webp);
+}
+
+ul {
+    display: flex;
+    position: sticky;
+}
+
+.header{
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    right: 0;
+    flex-wrap: wrap;
+    background-color: white;
+    
+}
+
+.header nav img {
+    margin: 10px 8%;
+}
+
+nav ul li {
+    list-style-type: none;
+    padding: 25px 10px;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li select {
+    border: none;
+    font-size: 18px;
+    font-family: sans-serif;
+
+}
+
+ul .btnget {
+    display: flex;
+    justify-content: center;
+    width: 38%;
+}
+
+nav ul button {
+    margin-top: 20px;
+    height: 45px;
+    padding: 17px 28px;
+    border: none;
+    border-radius: 5px;
+    /* background-color: rgba(178, 28, 28, 0.593); */
+    background: rgba(217, 97, 34, .3);
+    color: #da6427;
+    min-width: 20%;
+    text-align: center;
+    cursor: pointer;
+}
+
+nav ul button:hover {
+    border-radius: 5px;
+    background-color: white;
+    transition: all .5s ease-in;
+    border: 1px solid #D96122;
+}
+.headtext h1 {
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 700;
+    line-height: 90px;
+    margin-top: 5%;
+    font-family: "Poppins", sans-serif;
+}
+
+.headtext h1 span {
+    color: red;
+}
+
+.headtext p {
+    font-size: 17px;
+    text-align: center;
+    margin-top: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.headtext button {
+    border: none;
+    height: 60px;
+    min-width: 13%;
+    font-size: 18px;
+    background: #D96122;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 13px 40px;
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    margin: auto;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.headtext img {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    // padding: 50px;
+}
+
+.btnGet{
+    margin-left: 300px;
+}

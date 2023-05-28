@@ -1,0 +1,38 @@
+<div class="row justify-content-center">
+    <div class="col-4 bg-white shadow py-4 rounded">
+      <h3 class="justify-content-center text-center">Template Driven Form</h3>
+  <form  (ngSubmit)="onSubmit(myForm)" (reset)="resetUserForm(myForm)" #myForm="ngForm">
+    <div class="form-group">
+      <label for="exampleInputEmail1">First Name</label>
+      <input type="text" class="form-control" id="firstname" placeholder="First Name" name="firstname" ngModel required #firstNameVar="ngModel"
+      [ngClass]="{'is-invalid': firstNameVar.errors?.['required'] && firstNameVar.touched && !firstNameVar.dirty}">
+      <span *ngIf="firstNameVar.errors?.['required'] && firstNameVar.touched && !firstNameVar.dirty" class="text-danger">
+        Please enter your first name!!
+      </span>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Last Name</label>
+      <input type="text" class="form-control" id="lastname" placeholder="Last Name" name="lastname" ngModel required #lastNameVar="ngModel"
+      [ngClass]="{'is-invalid': lastNameVar.errors?.['required'] && lastNameVar.touched && !lastNameVar.dirty}">
+      <span *ngIf="lastNameVar.errors?.['required'] && lastNameVar.touched && !lastNameVar.dirty" class="text-danger">
+        Please enter your last name!!
+      </span>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Email" name="email" ngModel required #email="ngModel"
+      [ngClass]="{'is-invalid': email.errors?.['required'] && email.touched && !email.dirty}" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+      <div *ngIf="email.touched">
+        <p *ngIf="email.errors?.['required']" class="text-danger">Email is a required field!</p>
+        <p *ngIf="email.errors?.['pattern']" class="text-danger">This is not a valid Email!!!</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2"><button type="submit" class="btn btn-primary my-2" [disabled]="!myForm.valid">Submit</button></div>
+      <div class="col-2"><button type="reset" class="btn btn-primary my-2">Reset</button></div>
+    </div>
+  </form>
+  <p>Your Name : {{firstname}} {{lastname}}</p>
+  <p>Your Email : {{emailData}}</p>
+</div>
+</div>
